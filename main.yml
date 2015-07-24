@@ -1,0 +1,8 @@
+---
+- name: ansible tower testing
+  hosts: local
+  tasks:
+  - debug:
+      msg: "{{ inventory_dir }}"
+  - debug:
+      msg: "{{ lookup('password', inventory_dir + '/credentials/foo chars=ascii_letters,digits') }}" 
